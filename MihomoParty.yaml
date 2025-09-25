@@ -12,61 +12,80 @@
 # @ConfigVersion     1.0.20
 # @ConfigUrl         https://github.com/ddgksf2013/Profile/raw/master/MihomoParty.yaml
 #==========================================
-
 proxy-groups:
-
-  - {name: 节点选择, type: url-test, include-all: true, interval: 600, tolerance: 50,  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png }
-  - {name: 自动选择, type: url-test, include-all: true, interval: 600, tolerance: 50,  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png }
-  - {name: ✈️ 手动选择, type: select, include-all: true }
-  - {name: 🛩️ 手动选择备用, type: select, include-all: true }
-  
-#分流分组
-  - {name: 全球加速, type: select, proxies: [节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, DIRECT, 自动选择, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png }
-  - {name: 苹果服务, type: select, proxies: [DIRECT, 节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, 自动选择, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png }
-  - {name: 微软服务, type: select, proxies: [DIRECT, 节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, 自动选择, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png }
-  - {name: 哔哩哔哩, type: select, proxies: [DIRECT, 香港节点, 台湾节点], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/bilibili.png }
-  - {name: 巴哈姆特, type: select, proxies: [节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, DIRECT, 台湾节点], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Bahamut.png }
-  - {name: 油管视频, type: select, proxies: [节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, DIRECT, 自动选择, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/YouTube.png }
-  - {name: Emby服务, type: select, proxies: [节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, DIRECT, 自动选择, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Emby.png }
-  - {name: OpenAi,  type: select, proxies: [节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, DIRECT, 自动选择, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png }
-  - {name: 国际媒体, type: select, proxies: [节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, DIRECT, 自动选择, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Streaming.png }
-  - {name: 谷歌服务, type: select, proxies: [节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, DIRECT, 自动选择, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png }
-  - {name: 电报消息, type: select, proxies: [节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, DIRECT, 自动选择, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png }
-  - {name: 推特服务, type: select, proxies: [节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, DIRECT, 自动选择, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Twitter.png }
-  - {name: 游戏平台, type: select, proxies: [DIRECT, 节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, 自动选择, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/GAME.png }
-  - {name: AdBlock,  type: select, proxies: [REJECT, DIRECT], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Adblock.png }
-  - {name: 兜底分流, type: select, proxies: [节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, DIRECT, 自动选择, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png }
-  
-#节点分组
-  
-  - {name: 香港节点, type: url-test, include-all: true, interval: 600, tolerance: 50,  filter: "港|HK|(?i)Hong", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png }             
-  - {name: 日本节点, type: url-test, include-all: true, interval: 600, tolerance: 50,  filter: "日|东京|JP|(?i)Japan", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png }
-  - {name: 台湾节点, type: url-test, include-all: true, interval: 600, tolerance: 50,  filter: "台|湾|TW|(?i)Taiwan", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png }
-  - {name: 美国节点, type: url-test, include-all: true, interval: 600, tolerance: 50,  filter: "美|US|(?i)States|American", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png }
-  - {name: 狮城节点, type: url-test, include-all: true, interval: 600, tolerance: 50,  filter: "新|坡|SG|(?i)Singapore", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png }
-
-# 分流规则 
+  #分流分组
+  - {name: 节点选择, type: select, proxies: [自动选择, 🔯 故障转移, 🔮 负载均衡, ✈️ 手动选择, 🛩️ 手动选择备用, DIRECT, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点, 韩国节点, 东南亚节点], icon: 'https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png'}
+  - {name: 自动选择, type: url-test, include-all: true, interval: 300, tolerance: 30, url: 'http://www.gstatic.com/generate_204', icon: 'https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png'}
+  - {name: ✈️ 手动选择, type: select, include-all: true, icon: 'https://testingcf.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/select.png'}
+  - {name: 🛩️ 手动选择备用, type: select, include-all: true, icon: 'https://testingcf.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/select.png'}
+  - {name: 🔯 故障转移, type: fallback, include-all: true, interval: 300, tolerance: 30, url: 'http://www.gstatic.com/generate_204'}
+  - {name: 🔮 负载均衡, type: load-balance, include-all: true, strategy: consistent-hashing, interval: 300, tolerance: 30, url: 'http://www.gstatic.com/generate_204'}
+  #应用分组
+  - {name: 全球加速, type: select, proxies: [节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, DIRECT, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点, 韩国节点, 东南亚节点], icon: 'https://ghfast.top/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png'}
+  - {name: 微软服务, type: select, proxies: [节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, DIRECT, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点, 韩国节点, 东南亚节点], icon: 'https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png'}
+  - {name: OneDrive, type: select, proxies: [节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, DIRECT, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点, 韩国节点, 东南亚节点], icon: 'https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/OneDrive.png'}
+  - {name: 苹果服务, type: select, proxies: [DIRECT, 节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点, 韩国节点, 东南亚节点], icon: 'https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png'}
+  - {name: 哔哩哔哩, type: select, proxies: [DIRECT, 节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点, 韩国节点, 东南亚节点], icon: 'https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili.png'}
+  - {name: 巴哈姆特, type: select, proxies: [节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, DIRECT, 香港节点, 台湾节点], icon: 'https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bahamut.png'}
+  - {name: 斗鱼直播, type: select, proxies: [节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, DIRECT, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点, 韩国节点, 东南亚节点], icon: 'https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/douyu.png'}
+  - {name: TikTok, type: select, proxies: [节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, 自建/家宽节点, 东南亚节点, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点, 韩国节点], icon: 'https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png'}
+  - {name: 油管视频, type: select, proxies: [节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, DIRECT, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点, 韩国节点, 东南亚节点], icon: 'https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png'}
+  - {name: Emby服务, type: select, proxies: [节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, DIRECT, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点, 韩国节点, 东南亚节点], icon: 'https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Emby.png'}
+  - {name: OpenAi, type: select, proxies: [节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, DIRECT, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点, 韩国节点, 东南亚节点], icon: 'https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png'}
+  - {name: 国际媒体, type: select, proxies: [节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, DIRECT, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点, 韩国节点, 东南亚节点], icon: 'https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png'}
+  - {name: 谷歌服务, type: select, proxies: [节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, DIRECT, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点, 韩国节点, 东南亚节点], icon: 'https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google.png'}
+  - {name: 电报消息, type: select, proxies: [节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, DIRECT, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点, 韩国节点, 东南亚节点], icon: 'https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png'}
+  - {name: 推特服务, type: select, proxies: [节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, DIRECT, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点, 韩国节点, 东南亚节点], icon: 'https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Twitter.png'}
+  - {name: 游戏平台, type: select, proxies: [节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, DIRECT, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点, 韩国节点, 东南亚节点], icon: 'https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png'}
+  - {name: AdBlock, type: select, proxies: [REJECT, DIRECT], icon: 'https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AdBlack.png'}
+  - {name: 兜底分流, type: select, proxies: [节点选择, ✈️ 手动选择, 🛩️ 手动选择备用, DIRECT, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点, 韩国节点, 东南亚节点], icon: 'https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png'}
+  #节点分组
+  - {name: 自建/家宽节点, type: select, include-all: true, filter: "(?i)(自建|家宽|家庭|CF|The_house|private|home)", icon: "https://ghfast.top/https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Airport.png"}
+  - {name: 香港节点, type: select, proxies: [香港自动, 香港均衡], include-all: true, filter: "(?i)(港|🇭🇰|HK|hk|hongkong|Hong Kong)", icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"}
+  - {name: 狮城节点, type: select, proxies: [新加坡自动, 新加坡均衡], include-all: true, filter: "(?i)(新|🇸🇬|SG|singapore)", icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png"}
+  - {name: 日本节点, type: select, proxies: [日本自动, 日本均衡], include-all: true, filter: "(?i)(日本|🇯🇵|JP|Japan)", icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"}
+  - {name: 台湾节点, type: select, proxies: [台湾自动, 台湾均衡], include-all: true, filter: "(?i)(台|TW|Taiwan)", icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png"}
+  - {name: 韩国节点, type: select, proxies: [韩国自动, 韩国均衡], include-all: true, filter: "(?i)KR|🇰🇷|Korea|KOR|首尔|韩|韓", icon: 'https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Korea.png'}
+  - {name: 美国节点, type: select, proxies: [美国自动, 美国均衡], include-all: true, filter: "(?i)(美|🇺🇲|US|America|United States)", exclude-filter: "(?i)(Australia|Russia)", icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"}
+  - {name: 东南亚节点, type: select, proxies: [东南亚自动, 东南亚均衡], include-all: true, filter: "(?i)(越南|🇻🇳|泰国|🇹🇭|印尼|🇮🇩|印度尼西亚|菲律宾|🇵🇭|马来西亚|🇲🇾)", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Map_of_Southeast_Asia%28zh-hans%29.png/330px-Map_of_Southeast_Asia%28zh-hans%29.png"}
+  - {name: 香港自动, type: url-test, include-all: true, tolerance: 30, interval: 300, url: 'http://www.gstatic.com/generate_204', hidden: true, filter: "(?i)(香港|🇭🇰|HK|hk|hongkong|Hong Kong)", exclude-filter: "(?i)(The_HK_automation|wcloud|2x|2X|2倍|3x|3X|3倍|4x|4X|4倍|5x|5X|5倍|traffic|plus)", icon: "https://ghfast.top/https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Speedtest.png", lazy: true}
+  - {name: 新加坡自动, type: url-test, include-all: true, tolerance: 30, interval: 300, url: 'http://www.gstatic.com/generate_204', hidden: true, filter: "(?i)(新|🇸🇬|SG|Singapore)", exclude-filter: "(?i)(The_SG_automation|wcloud|2x|2X|2倍|3x|3X|3倍|4x|4X|4倍|5x|5X|5倍|traffic|plus)", icon: "https://ghfast.top/https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Speedtest.png", lazy: true}
+  - {name: 日本自动, type: url-test, include-all: true, tolerance: 30, interval: 300, url: 'http://www.gstatic.com/generate_204', hidden: true, filter: "(?i)(日本|🇯🇵|JP|Japan)", exclude-filter: "(?i)(The_JP_automation|wcloud|2x|2X|2倍|3x|3X|3倍|4x|4X|4倍|5x|5X|5倍|traffic|plus)", icon: "https://ghfast.top/https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Speedtest.png", lazy: true}
+  - {name: 台湾自动, type: url-test, include-all: true, tolerance: 30, interval: 300, url: 'http://www.gstatic.com/generate_204', hidden: true, filter: "(?i)(台|TW|Taiwan)", exclude-filter: "(?i)(The_TW_automation|wcloud|2x|2X|2倍|3x|3X|3倍|4x|4X|4倍|5x|5X|5倍|traffic|plus)", icon: "https://ghfast.top/https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Speedtest.png", lazy: true}
+  - {name: 韩国自动, type: url-test, include-all: true, tolerance: 30, interval: 300, url: 'http://www.gstatic.com/generate_204', hidden: true, filter: "(?i)KR|🇰🇷|Korea|KOR|首尔|韩|韓", exclude-filter: "(?i)(The_KR_automation|wcloud|2x|2X|2倍|3x|3X|3倍|4x|4X|4倍|5x|5X|5倍|traffic|plus)", icon: "https://ghfast.top/https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Speedtest.png", lazy: true}
+  - {name: 美国自动, type: url-test, include-all: true, tolerance: 30, interval: 300, url: 'http://www.gstatic.com/generate_204', hidden: true, filter: "(?i)(美|🇺🇲|US|America|United States)", exclude-filter: "(?i)(The_US_automation|wcloud|2x|2X|2倍|3x|3X|3倍|4x|4X|4倍|5x|5X|5倍|russia|austria|plus|traffic|Australia|rus|aus)", icon: "https://ghfast.top/https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Speedtest.png", lazy: true}
+  - {name: 东南亚自动, type: url-test, include-all: true, tolerance: 30, interval: 300, url: 'http://www.gstatic.com/generate_204', hidden: true, filter: "(?i)(越南|🇻🇳|泰国|🇹🇭|印尼|🇮🇩|印度尼西亚|菲律宾|🇵🇭|马来西亚|🇲🇾)", exclude-filter: "(?i)(The_SG_automation|wcloud|2x|2X|2倍|3x|3X|3倍|4x|4X|4倍|5x|5X|5倍|plus|traffic)", icon: "https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/load-balance.png"}
+  - {name: 香港均衡, type: load-balance, include-all: true, strategy: consistent-hashing, hidden: true, filter: "(?i)(香港|🇭🇰|HK|hk|hongkong|Hong Kong)", exclude-filter: "(?i)(The_HK_balance|wcloud|2x|2X|2倍|3x|3X|3倍|4x|4X|4倍|5x|5X|5倍|traffic|plus)", icon: "https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/load-balance.png"}
+  - {name: 新加坡均衡, type: load-balance, include-all: true, strategy: consistent-hashing, hidden: true, filter: "(?i)(新|🇸🇬|SG|Singapore)", exclude-filter: "(?i)(The_SG_balance|wcloud|2x|2X|2倍|3x|3X|3倍|4x|4X|4倍|5x|5X|5倍|traffic|plus)", icon: "https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/load-balance.png"}
+  - {name: 日本均衡, type: load-balance, include-all: true, strategy: consistent-hashing, hidden: true, filter: "(?i)(日本|🇯🇵|JP|Japan)", exclude-filter: "(?i)(The_JP_balance|wcloud|2x|2X|2倍|3x|3X|3倍|4x|4X|4倍|5x|5X|5倍|traffic|plus)", icon: "https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/load-balance.png"}
+  - {name: 台湾均衡, type: load-balance, include-all: true, strategy: consistent-hashing, hidden: true, filter: "(?i)(台|TW|Taiwan)", exclude-filter: "(?i)(The_TW_balance|wcloud|2x|2X|2倍|3x|3X|3倍|4x|4X|4倍|5x|5X|5倍|traffic|plus)", icon: "https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/load-balance.png"}
+  - {name: 韩国均衡, type: load-balance, include-all: true, strategy: consistent-hashing, hidden: true, filter: "(?i)KR|🇰🇷|Korea|KOR|首尔|韩|韓", exclude-filter: "(?i)(The_KR_balance|wcloud|2x|2X|2倍|3x|3X|3倍|4x|4X|4倍|5x|5X|5倍|traffic|plus)", icon: "https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/load-balance.png"}
+  - {name: 美国均衡, type: load-balance, include-all: true, strategy: consistent-hashing, hidden: true, filter: "(?i)(美|🇺🇲|US|America|United States)", exclude-filter: "(?i)(The_US_balance|wcloud|2x|2X|2倍|3x|3X|3倍|4x|4X|4倍|5x|5X|5倍|russia|austria|plus|traffic|Australia|rus|aus)", icon: "https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/load-balance.png"}
+  - {name: 东南亚均衡, type: load-balance, include-all: true, strategy: consistent-hashing, hidden: true, filter: "(?i)(越南|🇻🇳|泰国|🇹🇭|印尼|🇮🇩|印度尼西亚|菲律宾|🇵🇭|马来西亚|🇲🇾)", exclude-filter: "(?i)(The_SG_balance|wcloud|2x|2X|2倍|3x|3X|3倍|4x|4X|4倍|5x|5X|5倍|plus|traffic)", icon: "https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/load-balance.png"}
+# 分流规则
 rule-providers:
-  AdBlock:     {behavior: domain,    interval: 86400, format: text, type: http, url: https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt ,                                           path: ./ruleset/anti-ad-clash.txt }
-  OpenAi:      {behavior: classical, interval: 86400, format: yaml, type: http, url: https://gist.githubusercontent.com/ddgksf2013/cb4121e8b5c5d865cc949cb8120320c4/raw/Ai.yaml ,                               path: ./ruleset/OpenAi.yaml       }
-  Emby:        {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/ddgksf2013/Filter/master/Emby.yaml ,                                                     path: ./ruleset/Emby.yaml         }
-  BiliBili:    {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.yaml ,                  path: ./ruleset/BiliBili.yaml     }
-  Bahamut:     {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bahamut/Bahamut.yaml ,                    path: ./ruleset/Bahamut.yaml      } 
-  YouTube:     {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml ,                    path: ./ruleset/YouTube.yaml      }
-  GlobalMedia: {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml ,  path: ./ruleset/GlobalMedia.yaml  }
-  Apple:       {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Classical.yaml ,              path: ./ruleset/Apple.yaml        }
-  Github:      {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml ,                      path: ./ruleset/Github.yaml       }
-  Microsoft:   {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml ,                path: ./ruleset/Microsoft.yaml    }
-  Google:      {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml ,                      path: ./ruleset/Google.yaml       }
-  Telegram:    {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml ,                  path: ./ruleset/Telegram.yaml     }
-  Twitter:     {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml ,                    path: ./ruleset/Twitter.yaml      }
-  Game:        {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game.yaml ,                          path: ./ruleset/Game.yaml         }
-  ProxyLite:   {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ProxyLite/ProxyLite.yaml ,                path: ./ruleset/ProxyLite.yaml    }
-  Direct:      {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Direct/Direct.yaml ,                      path: ./ruleset/Direct.yaml       }
-  Lan:         {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml ,                            path: ./ruleset/Lan.yaml          }
-  Download:    {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download.yaml ,                  path: ./ruleset/Download.yaml     }
-  ChinaIP:     {behavior: ipcidr,    interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/soffchen/GeoIP2-CN/release/clash-rule-provider.yml ,                                     path: ./ruleset/ChinaIP.yaml      }
-
+  AdBlock: {behavior: domain, interval: 86400, format: text, type: http, url: 'https://ghfast.top/https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt', path: ./ruleset/anti-ad-clash.txt}
+  OpenAi: {behavior: classical, interval: 86400, format: yaml, type: http, url: 'https://gist.githubusercontent.com/ddgksf2013/cb4121e8b5c5d865cc949cb8120320c4/raw/Ai.yaml', path: ./ruleset/OpenAi.yaml}
+  Emby: {behavior: classical, interval: 86400, format: yaml, type: http, url: 'https://ghfast.top/https://raw.githubusercontent.com/ddgksf2013/Filter/master/Emby.yaml', path: ./ruleset/Emby.yaml}
+  BiliBili: {behavior: classical, interval: 86400, format: yaml, type: http, url: 'https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.yaml', path: ./ruleset/BiliBili.yaml}
+  Bahamut: {behavior: classical, interval: 86400, format: yaml, type: http, url: 'https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bahamut/Bahamut.yaml', path: ./ruleset/Bahamut.yaml}
+  Douyu: {behavior: classical, interval: 86400, format: yaml, type: http, url: 'https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Douyu/Douyu.yaml', path: ./ruleset/Douyu.yaml}
+  TikTok: {behavior: classical, interval: 86400, format: yaml, type: http, url: 'https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.yaml', path: ./ruleset/TikTok.yaml}
+  YouTube: {behavior: classical, interval: 86400, format: yaml, type: http, url: 'https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml', path: ./ruleset/YouTube.yaml}
+  GlobalMedia: {behavior: classical, interval: 86400, format: yaml, type: http, url: 'https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml', path: ./ruleset/GlobalMedia.yaml}
+  Apple: {behavior: classical, interval: 86400, format: yaml, type: http, url: 'https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Classical.yaml', path: ./ruleset/Apple.yaml}
+  Github: {behavior: classical, interval: 86400, format: yaml, type: http, url: 'https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml', path: ./ruleset/Github.yaml}
+  OneDrive: {behavior: classical, interval: 86400, format: yaml, type: http, url: 'https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml', path: ./ruleset/OneDrive.yaml}
+  Microsoft: {behavior: classical, interval: 86400, format: yaml, type: http, url: 'https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml', path: ./ruleset/Microsoft.yaml}
+  Google: {behavior: classical, interval: 86400, format: yaml, type: http, url: 'https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml', path: ./ruleset/Google.yaml}
+  Telegram: {behavior: classical, interval: 86400, format: yaml, type: http, url: 'https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml', path: ./ruleset/Telegram.yaml}
+  Twitter: {behavior: classical, interval: 86400, format: yaml, type: http, url: 'https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml', path: ./ruleset/Twitter.yaml}
+  Game: {behavior: classical, interval: 86400, format: yaml, type: http, url: 'https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game.yaml', path: ./ruleset/Game.yaml}
+  ProxyLite: {behavior: classical, interval: 86400, format: yaml, type: http, url: 'https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ProxyLite/ProxyLite.yaml', path: ./ruleset/ProxyLite.yaml}
+  Direct: {behavior: classical, interval: 86400, format: yaml, type: http, url: 'https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Direct/Direct.yaml', path: ./ruleset/Direct.yaml}
+  Lan: {behavior: classical, interval: 86400, format: yaml, type: http, url: 'https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml', path: ./ruleset/Lan.yaml}
+  Download: {behavior: classical, interval: 86400, format: yaml, type: http, url: 'https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download.yaml', path: ./ruleset/Download.yaml}
+  ChinaIP: {behavior: ipcidr, interval: 86400, format: yaml, type: http, url: 'https://ghfast.top/https://raw.githubusercontent.com/soffchen/GeoIP2-CN/release/clash-rule-provider.yml', path: ./ruleset/ChinaIP.yaml}
 # 分流Policy 
 rules:
   - RULE-SET,AdBlock,AdBlock
@@ -74,14 +93,17 @@ rules:
   - RULE-SET,Emby,Emby服务
   - RULE-SET,BiliBili,哔哩哔哩
   - RULE-SET,Bahamut,巴哈姆特
+  - RULE-SET,Douyu,斗鱼直播
+  - RULE-SET,TikTok,TikTok
   - RULE-SET,YouTube,油管视频
   - RULE-SET,GlobalMedia,国际媒体
   - RULE-SET,Apple,苹果服务
   - RULE-SET,Github,全球加速
+  - RULE-SET,OneDrive,OneDrive
   - RULE-SET,Microsoft,微软服务
   - RULE-SET,Google,谷歌服务
   - RULE-SET,Telegram,电报消息
-  - RULE-SET,Twitter,全球加速
+  - RULE-SET,Twitter,推特服务
   - RULE-SET,Game,游戏平台
   - RULE-SET,ProxyLite,全球加速
   - RULE-SET,ChinaIP,DIRECT
